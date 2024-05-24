@@ -72,6 +72,7 @@ const EditNewsPage: FunctionComponent = () => {
   const savePage = async (pageForSaving:IPage) => {
     if (!pageForSaving || !(pageForSaving.body || pageForSaving.mainImage || pageForSaving.images)) return;
     let newPage: IPage;
+    pageForSaving.date = new Date();
     if (!pageForSaving.id) {
       newPage = await Api.createPage(pageForSaving, admin?.token ?? '');
     } else {
@@ -83,6 +84,7 @@ const EditNewsPage: FunctionComponent = () => {
   const saveNews = async (newsForSaving: INews) => {
     if (!newsForSaving) return;
     let newNews: INews;
+    newsForSaving.date = new Date();
     if (!newsForSaving.id) {
       newNews = await Api.createNews(newsForSaving, admin?.token ?? '');
     } else {

@@ -47,7 +47,7 @@ const EditNotesPage: FunctionComponent = () => {
     if (!notes) return;
 
     let newNotes: INote;
-
+    notes.date = new Date();
     if (!notes.id) {
       newNotes = await Api.createNote(notes, admin?.token ?? '');
     } else {

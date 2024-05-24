@@ -41,6 +41,7 @@ const EditHomePage: FunctionComponent = () => {
     setLoading(true);
 
     page.urlSegment = 'home';
+    page.date = new Date();
     await Api.updatePage(page.id, page, admin?.token ?? '');
     setLoading(false);
 

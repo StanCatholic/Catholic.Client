@@ -58,6 +58,7 @@ const EditHolyMassPage: FunctionComponent = () => {
     setLoading(true);
 
     page.urlSegment = 'holy-mass';
+    page.date = new Date();
     page.body = JSON.stringify(pageSelections);
     await Api.updatePage(page.id, page, admin?.token ?? '');
     setLoading(false);

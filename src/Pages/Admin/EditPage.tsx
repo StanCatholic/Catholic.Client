@@ -54,7 +54,7 @@ const EditPage: FunctionComponent = () => {
   const savePage = async () => {
     if (!page) return;
     setLoading(true);
-
+    page.date = new Date();
     if (!page.id) {
       page.urlSegment = generateUrlSegment(page.title);
       await Api.createPage(page, admin?.token ?? '');
