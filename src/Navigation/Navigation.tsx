@@ -6,10 +6,9 @@ import Body from "../Components/PageElements/Body";
 
 const HolyMassPage = lazy(() => import("../Pages/HolyMassPage"));
 
-const catholicDomain = 'www.catholic.sk';
-const catholicDomain2 = 'catholic.sk';
-const churchDomain = 'www.holymass.sk';
-const churchDomain2 = 'holymass.sk';
+
+const catholicDomain = 'catholic.sk';
+const churchDomain = 'holymass.sk';
 
 const Navigation = () => {
   const location = useLocation();
@@ -17,11 +16,11 @@ const Navigation = () => {
 
   useEffect(() => {
     if (!isFirstTime) {
-      if (window.location.hostname === churchDomain || window.location.hostname === churchDomain2) {
-        window.location.assign(`http://${catholicDomain2}${window.location.pathname}`);
+      if (window.location.hostname.includes(churchDomain)) {
+        window.location.assign(`http://${catholicDomain}${window.location.pathname}`);
       }
-      if ((window.location.hostname === catholicDomain || window.location.hostname === catholicDomain2) && window.location.pathname === '/holy-mass') {
-        window.location.assign(`http://${churchDomain2}`);
+      if (window.location.hostname.includes(catholicDomain) && window.location.pathname === '/holy-mass') {
+        window.location.assign(`http://${churchDomain}`);
       }
     }
     setFirstTime(false);
@@ -29,7 +28,7 @@ const Navigation = () => {
 
   return (
     <Routes>
-      {(window.location.hostname === churchDomain || window.location.hostname === churchDomain2) && <Route index={true} element={
+      {window.location.hostname.includes(churchDomain) && <Route index={true} element={
         <Suspense fallback={<Body center={true}><Loading/></Body>}>
           <HolyMassPage/>
         </Suspense>
