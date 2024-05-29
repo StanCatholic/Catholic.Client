@@ -18,10 +18,10 @@ const Navigation = () => {
   useEffect(() => {
     if (!isFirstTime) {
       if (window.location.hostname === churchDomain || window.location.hostname === churchDomain2) {
-        window.location.assign(`http://${catholicDomain}${window.location.pathname}`);
+        window.location.assign(`http://${catholicDomain2}${window.location.pathname}`);
       }
       if ((window.location.hostname === catholicDomain || window.location.hostname === catholicDomain2) && window.location.pathname === '/holy-mass') {
-        window.location.assign(`http://${churchDomain}`);
+        window.location.assign(`http://${churchDomain2}`);
       }
     }
     setFirstTime(false);
