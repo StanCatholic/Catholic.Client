@@ -81,7 +81,7 @@ const EditNotesPage: FunctionComponent = () => {
 
       <Checkbox
         value={notes.isChurchNote}
-        text='Show on Hollymass.sk'
+        text='Show on Holymass.sk'
         onClick={isChurchNote => setNotes({...notes, isChurchNote} as INote)}
       />
 

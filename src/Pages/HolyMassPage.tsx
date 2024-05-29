@@ -69,7 +69,7 @@ export default class HolyMassPage extends React.Component<{}, IState> {
       <Body
         headerContent={
           <div className={styles.titleContainer}>
-            <p className={styles.left}><strong>Holly Masses</strong> at Church of St. Ladislaus</p>
+            <p className={styles.left}><strong>Holy Masses</strong> at Church of St. Ladislaus</p>
             <p className={styles.right}>each <strong>Sunday at 11:00am</strong> (in English)</p>
           </div>
         }
