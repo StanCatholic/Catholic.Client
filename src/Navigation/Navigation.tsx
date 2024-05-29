@@ -6,8 +6,8 @@ import Body from "../Components/PageElements/Body";
 
 const HolyMassPage = lazy(() => import("../Pages/HolyMassPage"));
 
-const catholicDomain = 'www.catholic-dev.store';
-const churchDomain = 'www.holymass-dev.store';
+const catholicDomain = 'www.catholic.sk';
+const churchDomain = 'www.holymass.sk';
 
 const Navigation = () => {
   const location = useLocation();
