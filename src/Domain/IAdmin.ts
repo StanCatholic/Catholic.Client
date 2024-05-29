@@ -3,4 +3,6 @@ export interface IAdmin {
   pass: string;
   photo: string;
   token: string;
+  isCatholicAdmin: boolean;
+  isHolymassAdmin: boolean;
 }

@@ -25,6 +25,8 @@ const EditNotesPage: FunctionComponent = () => {
     const admin = AdminHelper.getAdminCredentials();
     setAdmin(admin);
 
+    setNotes({...notes, isHomeNote: admin?.isCatholicAdmin, isChurchNote: admin?.isHolymassAdmin} as INote);
+
     if (!id) {
       setLoading(false);
       return;
@@ -73,17 +75,25 @@ const EditNotesPage: FunctionComponent = () => {
         <BodyEditor body={notes.info} onBodyUpdate={i => setNotes({...notes, info: i} as INote)}/>
       </div>
 
-      <Checkbox
-        value={notes.isHomeNote}
-        text='Show on Catholic.sk'
-        onClick={isHomeNote => setNotes({...notes, isHomeNote} as INote)}
-      />
+      {admin?.isCatholicAdmin ?
+        <Checkbox
+          value={notes.isHomeNote}
+          text='Show on Catholic.sk'
+          onClick={isHomeNote => setNotes({...notes, isHomeNote} as INote)}
+        />
+        : null
+      }
 
-      <Checkbox
-        value={notes.isChurchNote}
-        text='Show on Holymass.sk'
-        onClick={isChurchNote => setNotes({...notes, isChurchNote} as INote)}
-      />
+
+      {admin?.isHolymassAdmin ?
+        <Checkbox
+          value={notes.isChurchNote}
+          text='Show on Holymass.sk'
+          onClick={isChurchNote => setNotes({...notes, isChurchNote} as INote)}
+        />
+        : null
+      }
+
 
       <Button
         className={styles.saveButton}

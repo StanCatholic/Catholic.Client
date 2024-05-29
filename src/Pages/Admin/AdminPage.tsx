@@ -44,7 +44,16 @@ export default class AdminPage extends React.Component<{}, IState> {
         if (pages.length) {
           Api.getAllNews().then((news) => {
             if (news?.length) {
-              pages = pages.filter(p => !news.some(n => p.urlSegment === n.link));
+              pages = pages
+                .filter(p => !news.some(n => p.urlSegment === n.link));
+
+              if(adminInfo?.isHolymassAdmin && !adminInfo?.isCatholicAdmin){
+                pages = pages.filter(p => p.urlSegment === 'holy-mass');
+              }
+
+              if(!adminInfo?.isHolymassAdmin && adminInfo?.isCatholicAdmin){
+                pages = pages.filter(p => p.urlSegment !== 'holy-mass');
+              }
 
               this.setState({
                 loading: false,

@@ -15,7 +15,7 @@ export const defaultNews : INews = {
   description: '',
   date: new Date(),
   isChurchNews: false,
-  isHomeNews: true,
+  isHomeNews: false,
   link: undefined,
   image: undefined
 }

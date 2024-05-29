@@ -40,6 +40,17 @@ export default class AdminNotesPage extends React.Component<{}, IState> {
 
       Api.getAllNotes().then((notes) => {
         if (notes?.length) {
+
+            notes = notes.sort((a, b) => {
+                if (adminInfo?.isHolymassAdmin) {
+                return Number(b.isChurchNote) - Number(a.isChurchNote);
+                } else if (adminInfo?.isCatholicAdmin) {
+                return Number(b.isHomeNote) - Number(a.isHomeNote);
+                } else {
+                return 0;
+                }
+            });
+
           this.setState({
             loading: false,
             notes: notes,

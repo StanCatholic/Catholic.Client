@@ -43,6 +43,15 @@ export default class AdminNewsPage extends React.Component<{}, IState> {
 
       Api.getAllNews().then((news) => {
         if (news?.length) {
+          news = news.sort((a, b) => {
+            if (adminInfo?.isHolymassAdmin) {
+              return Number(b.isChurchNews) - Number(a.isChurchNews);
+            } else if (adminInfo?.isCatholicAdmin) {
+              return Number(b.isHomeNews) - Number(a.isHomeNews);
+            } else {
+              return 0;
+            }
+          });
           this.setState({
             loading: false,
             news: news,

@@ -27,6 +27,8 @@ const EditNewsPage: FunctionComponent = () => {
     const admin = AdminHelper.getAdminCredentials();
     setAdmin(admin);
 
+    setNews({...news, isHomeNews: admin?.isCatholicAdmin, isChurchNews: admin?.isHolymassAdmin} as INews);
+
     if (!id) {
       setLoading(false);
       return;
@@ -132,17 +134,21 @@ const EditNewsPage: FunctionComponent = () => {
 
       <PageEditor page={page ?? {} as IPage} onChange={updatePage} showTitle={false} resizeHeight={240}/>
 
-      <Checkbox
-        value={news.isHomeNews}
-        text='Show on Catholic.sk'
-        onClick={isHomeNews => setNews({...news, isHomeNews} as INews)}
-      />
+      {admin?.isCatholicAdmin ?
+        <Checkbox
+          value={news.isHomeNews}
+          text='Show on Catholic.sk'
+          onClick={isHomeNews => setNews({...news, isHomeNews} as INews)}
+        />
+        : null}
 
-      <Checkbox
-        value={news.isChurchNews}
-        text='Show on Holymass.sk'
-        onClick={isChurchNews => setNews({...news, isChurchNews} as INews)}
-      />
+      {admin?.isHolymassAdmin ?
+        <Checkbox
+          value={news.isChurchNews}
+          text='Show on Holymass.sk'
+          onClick={isChurchNews => setNews({...news, isChurchNews} as INews)}
+        />
+      : null}
 
       <Button
         className={styles.saveButton}
