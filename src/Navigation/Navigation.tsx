@@ -29,7 +29,7 @@ const Navigation = () => {
 
   return (
     <Routes>
-      {window.location.hostname === churchDomain && <Route index={true} element={
+      {(window.location.hostname === churchDomain || window.location.hostname === churchDomain2) && <Route index={true} element={
         <Suspense fallback={<Body center={true}><Loading/></Body>}>
           <HolyMassPage/>
         </Suspense>
