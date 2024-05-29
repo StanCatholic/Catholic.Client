@@ -5,38 +5,83 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://www.catholic-dev.store/</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/english-bible-group</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/english-bible-group</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/choir</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/choir</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/legion-of-mary</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/legion-of-mary</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/catholic-table</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/catholic-table</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/news</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/news</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.catholic-dev.store/contacts</loc>
-        <lastmod>2023-12-14T14:43:14+00:00</lastmod>
+        <loc>https://www.catholic.sk/contacts</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
         <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/english-bible-group</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/choir</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/legion-of-mary</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/catholic-table</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/news</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://catholic.sk/contacts</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.holymass.sk/</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://holymass.sk/</loc>
+        <lastmod>2024-05-29T14:43:14+00:00</lastmod>
+        <priority>1.00</priority>
     </url>
 </urlset>
