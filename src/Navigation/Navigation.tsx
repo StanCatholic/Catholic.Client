@@ -7,7 +7,9 @@ import Body from "../Components/PageElements/Body";
 const HolyMassPage = lazy(() => import("../Pages/HolyMassPage"));
 
 const catholicDomain = 'www.catholic.sk';
+const catholicDomain2 = 'catholic.sk';
 const churchDomain = 'www.holymass.sk';
+const churchDomain2 = 'holymass.sk';
 
 const Navigation = () => {
   const location = useLocation();
@@ -15,10 +17,10 @@ const Navigation = () => {
 
   useEffect(() => {
     if (!isFirstTime) {
-      if (window.location.hostname === churchDomain) {
+      if (window.location.hostname === churchDomain || window.location.hostname === churchDomain2) {
         window.location.assign(`http://${catholicDomain}${window.location.pathname}`);
       }
-      if (window.location.hostname === catholicDomain && window.location.pathname === '/holy-mass') {
+      if ((window.location.hostname === catholicDomain || window.location.hostname === catholicDomain2) && window.location.pathname === '/holy-mass') {
         window.location.assign(`http://${churchDomain}`);
       }
     }
