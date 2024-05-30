@@ -9,6 +9,7 @@ import Constants from "../../Domain/Constants";
 import {IPage} from "../../Domain/IPage";
 import IHolyMassSections from "../../Domain/IHolyMass";
 import Avatar from "../StyledComponents/Avatar";
+import styles from "./MainInfo.module.css";
 
 interface IProps {
   holyMasses: IHolyMass[];
@@ -22,6 +23,10 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
     <BlurContainer
       title="Upcoming Holy Masses"
     >
+      <div className={styles.holymassUpdated}>
+        {page.date && <p>Updated on {moment(page.date).format('DD.MM.yyyy')}</p>}
+      </div>
+
       <GoldLine/>
 
       {selections
@@ -33,19 +38,29 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
         </>
       }
 
-      {page.date && <p>Updated on {moment(page.date).format('DD.MM.yyyy')}</p>}
-
-      <p>
+      <div>
         {holyMasses
           .filter(m => m.schedule >= new Date())
           .map((holyMass, index) =>
-            <span key={index}>
-              {moment(holyMass.schedule).format('dddd, MMMM DD')} at {moment(holyMass.schedule).format('h:mm a')}.
-              {holyMass.description ? ` - ${holyMass.description}` : null}
-              <br/>
-            </span>
+            <div key={index} className={styles.holymassEventContainer}>
+              <div className={styles.holymassDateTimeContainer}>
+                <div>
+                  <p className={styles.month}>{moment(holyMass.schedule).format('MMMM')}</p>
+                  <p className={styles.day}>{moment(holyMass.schedule).format('DD')}</p>
+                </div>
+                <div className={styles.verticalLine}/>
+                <div>
+                  <p className={styles.dayOfWeek}>{moment(holyMass.schedule).format('dddd')}</p>
+                  <p className={styles.time}>{moment(holyMass.schedule).format('h:mm a')}</p>
+                </div>
+              </div>
+
+              <div className={styles.holymassDescription}>
+                {holyMass.description}
+              </div>
+            </div>
           )}
-      </p>
+      </div>
 
       {selections
         ? <div dangerouslySetInnerHTML={{__html: selections.confessions}}/>
@@ -57,7 +72,8 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
             In the Blumental church I am available for confessions on following dates/times:Saturday, June 10: 5.50 -
             6.15pm.<br/>
             Friday, June 16: 11.45am - 12.20pm.<br/>
-            My confessional is on the left, in the back of the church (as you enter through the main entrance door).<br/>
+            My confessional is on the left, in the back of the church (as you enter through the main entrance
+            door).<br/>
             <br/>
             Past Holy Masses and other reflections can be found on:
           </p>

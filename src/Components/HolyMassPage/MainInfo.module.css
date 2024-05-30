@@ -13,7 +13,6 @@
 
 .title{
     color: var(--color-green-100);
-
 }
 .titleLine{
     border-bottom-width: 2px;
@@ -23,6 +22,16 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.holymassUpdated{
+    position: absolute;
+    right: 5%;
+}
+
+.holymassUpdated p{
+    font-size: 0.9rem;
+}
+
 .container p{
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
@@ -33,11 +42,76 @@
     margin-bottom: 1.6rem;
 }
 
+.holymassContainer{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.holymassEventContainer{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+}
+
+.holymassDateTimeContainer{
+    margin: 0.6rem 0.6rem 0.2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.verticalLine{
+    border-left: 1px solid gray;
+    height: 80%;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.holymassEventContainer .holymassDateTimeContainer .dayOfWeek{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.holymassEventContainer .holymassDateTimeContainer .day{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.holymassEventContainer .holymassDateTimeContainer .time{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.holymassEventContainer .holymassDateTimeContainer .month{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.holymassDescription{
+    margin: 0.6rem 0.6rem 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (max-width: 960px) {
     .container {
         width: 90%;
         margin: 5%;
     }
+    .holymassEventContainer .holymassDateTimeContainer .day{
+        font-size: 1.6rem;
+    }
 }
-
 
