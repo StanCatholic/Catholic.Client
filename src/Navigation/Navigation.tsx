@@ -16,7 +16,7 @@ const Navigation = () => {
 
   useEffect(() => {
     if (!isFirstTime) {
-      if (window.location.hostname.includes(churchDomain)) {
+      if (window.location.hostname.includes(churchDomain) && !window.location.pathname.includes('/admin')) {
         window.location.assign(`http://${catholicDomain}${window.location.pathname}`);
       }
       if (window.location.hostname.includes(catholicDomain) && window.location.pathname === '/holy-mass') {

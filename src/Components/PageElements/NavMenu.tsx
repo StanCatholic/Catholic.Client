@@ -50,7 +50,7 @@ export const NavMenu: React.FC<INavMenuProps> = ({
           {links.map((link: ILink, index: number) =>
             <NavLink
               key={index}
-              className={`${styles.navLink} ${location.pathname === link.path ? styles.currentLink : null}`}
+              className={`${styles.navLink} ${location.pathname === link.path ? styles.currentLink : null} ${window.location.hostname.includes('holymass.sk') && link.path === '/holy-mass' ? styles.currentLink : null}`}
               to={link.path}>
               {link.name}
             </NavLink>
