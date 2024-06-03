@@ -21,7 +21,7 @@ const Activities = () => {
         <Activity
           title="Bible Group"
           description="
-          Join us every Thursday at 18:00 for our Bible Group.
+          Join us every Thursday at 19:00 for our Bible Group.
           We're an enthusiastic group engaging in thoughtful reflection, reading, and discussion on the Old and New Testaments in English.
           One-time or regular attendance welcomed. Join our journey of faith today!"
           image="/img/bible-group.webp"
