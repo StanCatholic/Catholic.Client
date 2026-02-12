@@ -3,7 +3,7 @@ import {defaultPage, IPage} from "../Domain/IPage";
 import {Page} from "./Page";
 import styles from "./ContactsPage.module.css";
 
-const email = 'info@catholic.sk';
+export const email = 'dr0608@gmail.com';
 
 const ContactsPage: React.FC = () => {
   const [page, setPage] = React.useState<IPage>(preloadPage);

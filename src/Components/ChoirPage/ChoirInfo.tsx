@@ -44,7 +44,7 @@ const ChoirInfo: React.FC<IProps> = (props) => {
             find!
           </p>
           <p>
-            For more information contact us at: info@catholic.sk
+            For more information contact us at: dr0608@gmail.com
           </p>
         </div>
       </div>

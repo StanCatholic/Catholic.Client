@@ -39,7 +39,7 @@ const preloadBody = '<div>\n' +
   '            Bratislava at 18:00).\n' +
   '          </p>\n' +
   '          <p>\n' +
-  '            For more information contact us at: info@catholic.sk\n' +
+  '            For more information contact us at: dr0608@gmail.com\n' +
   '          </p>\n' +
   '          <p>\n' +
   '            Looking forward to seeing you!\n' +
