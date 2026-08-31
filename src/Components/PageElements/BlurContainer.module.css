@@ -1,28 +1,61 @@
 .blurContainer {
     padding: 3rem;
-    color: var(--color-black);
+    color: #232323;
     margin: 2rem;
     border-radius: 4px;
     border: 1px solid #DBDBDB;
     background: rgba(1, 96, 102, 0.03);
     backdrop-filter: blur(17.5px);
     font-family: var(--font-cambay);
+    line-height: 1.65;
 }
 
 .blurContainer .title{
     margin-top: 0;
+    margin-bottom: 0.5rem;
     color: var(--color-green-100);
     font-size: var(--font-size-extra-large-h);
+    line-height: 1.3;
 }
 
 .blurContainer p{
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    line-height: 1.65;
+    max-width: 70ch;
 }
 
-.blurContainer h1{
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+.blurContainer h1,
+.blurContainer h2{
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.blurContainer h2{
+    font-size: var(--font-size-small-h);
+    color: var(--color-green-100);
+}
+
+.blurContainer a{
+    color: var(--color-green-100);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.blurContainer ul,
+.blurContainer ol{
+    margin: 1.1rem 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+.blurContainer ol{
+    list-style: decimal;
+}
+
+.blurContainer li{
+    margin-bottom: 0.4rem;
 }
 
 @media screen and (max-width: 768px) {

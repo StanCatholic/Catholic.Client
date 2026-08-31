@@ -52,11 +52,11 @@
 .holymassEventContainer{
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     background: var(--color-white);
-    border-left: 4px solid #C7AF8D;
-    padding: 0.9rem 1.25rem;
-    margin-bottom: 0.75rem;
+    border-left: 3px solid #C7AF8D;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .showMoreContainer{
@@ -70,15 +70,15 @@
 }
 
 .holymassDateTimeContainer{
-    flex: 0 0 6.5rem;
+    flex: 0 0 5.4rem;
     margin: 0;
 }
 
 .holymassEventContainer .holymassDateTimeContainer .month{
     margin: 0;
     padding: 0;
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-green-100);
     white-space: nowrap;
@@ -87,15 +87,15 @@
 .holymassEventContainer .holymassDateTimeContainer .day{
     margin: 0;
     padding: 0;
-    font-size: 1.9rem;
-    line-height: 1.15;
+    font-size: 1.45rem;
+    line-height: 1.2;
     color: var(--color-green-100);
 }
 
 .holymassEventContainer .holymassDateTimeContainer .dayOfWeek{
     margin: 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #6b6b6b;
     white-space: nowrap;
 }
@@ -103,14 +103,18 @@
 .holymassEventContainer .holymassDetails .time{
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
     color: var(--color-green-100);
     white-space: nowrap;
 }
 
 .holymassEventContainer .holymassDetails .holymassDescription{
-    margin: 0.15rem 0 0 0;
+    margin: 0.1rem 0 0 0;
     padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: none;
 }
 
 @media screen and (max-width: 960px) {
@@ -119,14 +123,14 @@
         margin: 5%;
     }
     .holymassEventContainer{
-        gap: 0.9rem;
-        padding: 0.8rem 1rem;
+        gap: 0.75rem;
+        padding: 0.55rem 0.8rem;
     }
     .holymassDateTimeContainer{
-        flex: 0 0 5.2rem;
+        flex: 0 0 4.6rem;
     }
     .holymassEventContainer .holymassDateTimeContainer .day{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
 
