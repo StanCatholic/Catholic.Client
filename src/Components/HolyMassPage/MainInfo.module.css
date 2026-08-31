@@ -26,10 +26,12 @@
 .holymassUpdated{
     display: flex;
     justify-content: flex-end;
+    margin-top: -1.5rem;
 }
 
 .holymassUpdated p{
     font-size: 0.9rem;
+    margin: 0;
 }
 
 .container p{

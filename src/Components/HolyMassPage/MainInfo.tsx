@@ -31,11 +31,11 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
     <BlurContainer
       title="Upcoming Holy Masses"
     >
+      <GoldLine/>
+
       <div className={styles.holymassUpdated}>
         {page.date && <p>Updated on {moment(page.date).format('DD.MM.yyyy')}</p>}
       </div>
-
-      <GoldLine/>
 
       {selections
         ? <div dangerouslySetInnerHTML={{__html: selections.title}}/>
