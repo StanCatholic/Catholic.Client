@@ -34,19 +34,6 @@ const ChoirInfo: React.FC<IProps> = (props) => {
       </div>
       <div className={styles.horizontalContainer}>
         {props.images && props.images.length > 1 && <img className={styles.leftImg} src={props.images[1]} alt="Songs"/>}
-
-        <div>
-          <p>
-            We regularly practice on Sundays at 10:30 am to go through the songs prior to the 11 am mass. If you have
-            any
-            questions, please do not hesitate to visit us by coming up to the balcony before or after mass. We're easy
-            to
-            find!
-          </p>
-          <p>
-            For more information contact us at: dr0608@gmail.com
-          </p>
-        </div>
       </div>
 
       <GoldLine className={styles.line}/>
