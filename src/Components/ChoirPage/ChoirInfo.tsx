@@ -24,8 +24,8 @@ const ChoirInfo: React.FC<IProps> = (props) => {
             Welcome to the choir!
           </p>
           <p>
-            At the moment we do not have an active choir. All who are interested in helping us sing again are
-            warmly invited to join.
+            We are an enthusiastic group who seek to serve the Lord through music. All who are interested are
+            invited to join the choir.
           </p>
         </div>
         {props.images?.length && <img className={styles.rightImg} src={props.images[0]} alt="Songs"/>}

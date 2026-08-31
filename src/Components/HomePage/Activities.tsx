@@ -32,8 +32,8 @@ const Activities = () => {
         <Activity
           title="Choir"
           description="
-          At the moment we do not have an active choir.
-          All who are interested in helping us sing again are warmly invited to join."
+          Discover the joy of serving the Lord through song with our spirited choir group.
+          All who are interested are warmly invited to join."
           image="/img/holymass-book.webp"
           link="/choir"
           isImageTop={true}
