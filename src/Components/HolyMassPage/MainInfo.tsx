@@ -54,7 +54,7 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
               className={`${styles.holymassEventContainer} ${index === 0 ? styles.holymassNext : ''}`}
             >
               <div className={styles.holymassDateTimeContainer}>
-                <p className={styles.month}>{moment(holyMass.schedule).format('MMMM')}</p>
+                <p className={styles.month}>{moment(holyMass.schedule).format('MMM')}</p>
                 <p className={styles.day}>{moment(holyMass.schedule).format('DD')}</p>
                 <p className={styles.dayOfWeek}>{moment(holyMass.schedule).format('dddd')}</p>
               </div>

@@ -24,8 +24,8 @@
 }
 
 .holymassUpdated{
-    position: absolute;
-    right: 5%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .holymassUpdated p{
@@ -51,12 +51,17 @@
 
 .holymassEventContainer{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     background: var(--color-white);
     border-left: 3px solid #C7AF8D;
     padding: 0.6rem 1rem;
     margin-bottom: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.holymassEventContainer:hover{
+    background-color: rgba(1, 96, 102, 0.04);
 }
 
 .showMoreContainer{
@@ -66,11 +71,11 @@
 }
 
 .holymassNext{
-    background: rgba(1, 96, 102, 0.06);
+    border-left-color: var(--color-green-100);
 }
 
 .holymassDateTimeContainer{
-    flex: 0 0 5.4rem;
+    flex: 0 0 4.6rem;
     margin: 0;
 }
 
@@ -89,6 +94,7 @@
     padding: 0;
     font-size: 1.45rem;
     line-height: 1.2;
+    font-variant-numeric: tabular-nums;
     color: var(--color-green-100);
 }
 
@@ -127,7 +133,7 @@
         padding: 0.55rem 0.8rem;
     }
     .holymassDateTimeContainer{
-        flex: 0 0 4.6rem;
+        flex: 0 0 4rem;
     }
     .holymassEventContainer .holymassDateTimeContainer .day{
         font-size: 1.3rem;

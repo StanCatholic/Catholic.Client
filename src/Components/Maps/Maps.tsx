@@ -52,7 +52,7 @@ const Map: FunctionComponent = () => {
               <div className={styles.verticalLine}/>
               <div className={styles.infoText}>
                 <h1>The Blue Church</h1>
-                <p>Bezručova 2, 811 09 Bratislava, Slovakia</p>
+                <p>Bezručova 2, 811 09 Bratislava</p>
               </div>
 
               <button
