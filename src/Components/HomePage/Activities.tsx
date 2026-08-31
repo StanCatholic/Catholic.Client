@@ -32,9 +32,9 @@ const Activities = () => {
         <Activity
           title="Choir"
           description="
-          Discover the joy of serving the Lord through song with our spirited choir group.
-          We prepare the songs for the Sunday English mass at church and lead the congregation in singing them.
-          Join us for regular practices on Sundays at 10:30 am."
+          At the moment we do not have an active choir.
+          The choir prepares the songs for the Sunday English mass and leads the congregation in singing them.
+          All who are interested in helping us sing again are warmly invited to join."
           image="/img/holymass-book.webp"
           link="/choir"
           isImageTop={true}
