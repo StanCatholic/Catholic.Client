@@ -1,44 +1,58 @@
+.mapWrapper{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.75rem 2.5rem rgba(1, 96, 102, 0.18);
+}
+
 .mapContainer{
-    width: 38%;
-    height: 766px;
+    width: 100%;
+    height: 32rem;
 }
 
 .infoContainer{
     display: flex;
     position: absolute;
-    top: 60px;
-    left: 10px;
-    background-color: white;
-    max-width: 20rem;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    max-width: 24rem;
+    align-items: center;
 }
 
 .verticalLine{
-    border-left: var(--color-green-100) 0.6rem solid;
-    height: 4.4rem;
-    margin-right: 1rem;
+    align-self: stretch;
+    border-left: var(--color-green-100) 0.5rem solid;
 }
 
 .infoText{
-    max-width: 80%;
-    margin: 0.6rem;
+    margin: 1rem 0.5rem 1rem 1rem;
 }
 
 .infoContainer h1{
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--color-green-100);
-    margin-bottom: 1rem;
+    margin: 0 0 0.35rem 0;
+    line-height: 1.3;
 }
 
 .infoContainer p{
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     color: var(--color-green-100);
-    margin-bottom: 0.5rem;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .directionsButton{
-    border-radius: 0.4rem;
+    cursor: pointer;
+    border-radius: 0.6rem;
     background-color: var(--color-gainsboro-100);
     border: var(--color-green-100) 0.1rem solid;
     display: flex;
@@ -46,29 +60,46 @@
     align-items: center;
     flex-direction: column;
     margin: 0.8rem;
+    padding: 0.4rem 0.2rem;
+    flex-shrink: 0;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .directionsButton:hover{
     box-shadow: 0 0 1rem rgba(1, 96, 102, 0.8);
+    transform: translateY(-0.1rem);
 }
 
 .directionsButton img{
     color: var(--color-green-100);
-    width: 2.6rem;
-    height: 2.6rem;
-    margin: 0.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: 0.2rem;
 }
 
 .directionsButton p{
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--color-green-100);
-    margin: 0 0.5rem 0.5rem 0.5rem;
+    margin: 0.2rem 0.5rem 0.3rem 0.5rem;
 }
 
 @media screen and (max-width: 1200px) {
     .mapContainer{
-        width: 90%;
+        height: 28rem;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .mapContainer{
+        height: 24rem;
+    }
+
+    .infoContainer{
+        top: auto;
+        bottom: 1rem;
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
     }
 }

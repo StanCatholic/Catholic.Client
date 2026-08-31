@@ -3,12 +3,26 @@ import React, {FunctionComponent, useState} from "react";
 import styles from './Maps.module.css';
 
 const center = {
-  lat: 48.14549,
-  lng: 17.11313
+  lat: 48.143389,
+  lng: 17.116833
+};
+
+const mapOptions = {
+  mapTypeControl: false,
+  streetViewControl: false,
+  fullscreenControl: false,
+  zoomControl: true,
+  styles: [
+    {featureType: 'poi.business', stylers: [{visibility: 'off'}]},
+    {featureType: 'transit', elementType: 'labels.icon', stylers: [{visibility: 'off'}]},
+    {featureType: 'water', elementType: 'geometry', stylers: [{color: '#cfe3e4'}]},
+    {featureType: 'landscape', elementType: 'geometry', stylers: [{color: '#f4f4f2'}]},
+    {featureType: 'road', elementType: 'geometry.stroke', stylers: [{visibility: 'off'}]}
+  ]
 };
 
 const handleDirectionsClick = () => {
-  const destination = 'Church of St. Ladislaus Špitálska, 811 08 Staré Mesto, Slovakia';
+  const destination = 'The Blue Church (Church of St. Elizabeth) Bezručova 2, 811 09 Bratislava, Slovakia';
   const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
 
   window.open(url, '_blank');
@@ -24,35 +38,38 @@ const Map: FunctionComponent = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey={`${process.env.REACT_APP_MAPS_KEY}`}>
-      <GoogleMap
-        mapContainerClassName={styles.mapContainer}
-        center={center}
-        zoom={18}
-        onLoad={handleMapLoad}
-      >
-        {isMapLoaded ?
-          <div className={styles.infoContainer}>
-            <div className={styles.verticalLine}/>
-            <div className={styles.infoText}>
-              <h1>Church of St. Ladislaus</h1>
-              <p>Špitálska, 811 08 Staré Mesto, Slovakia</p>
-            </div>
-
-            <button className={styles.directionsButton} onClick={handleDirectionsClick}>
-              <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                <img className="activity__link_arrow" style={{width: 18, height: 14}} src='/img/arrow.png' alt='arrow'/>
-                <img src={'/img/church.png'} alt={'directions'}/>
+    <div className={styles.mapWrapper}>
+      <LoadScript googleMapsApiKey={`${process.env.REACT_APP_MAPS_KEY}`}>
+        <GoogleMap
+          mapContainerClassName={styles.mapContainer}
+          center={center}
+          zoom={17}
+          options={mapOptions}
+          onLoad={handleMapLoad}
+        >
+          {isMapLoaded ?
+            <div className={styles.infoContainer}>
+              <div className={styles.verticalLine}/>
+              <div className={styles.infoText}>
+                <h1>The Blue Church</h1>
+                <p>Bezručova 2, 811 09 Bratislava, Slovakia</p>
               </div>
 
-              <p>Directions</p>
+              <button className={styles.directionsButton} onClick={handleDirectionsClick}>
+                <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                  <img className="activity__link_arrow" style={{width: 18, height: 14}} src='/img/arrow.png' alt='arrow'/>
+                  <img src={'/img/church.png'} alt={'directions'}/>
+                </div>
 
-            </button>
-          </div>
-          : null}
-        <Marker position={center}/>
-      </GoogleMap>
-    </LoadScript>
+                <p>Directions</p>
+
+              </button>
+            </div>
+            : null}
+          <Marker position={center}/>
+        </GoogleMap>
+      </LoadScript>
+    </div>
   );
 }
 export default Map;

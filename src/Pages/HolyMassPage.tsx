@@ -32,7 +32,7 @@ export default class HolyMassPage extends React.Component<{}, IState> {
 
   componentDidMount() {
     document.title = 'Catholic Holy Masses in English, Schedule and locations in Bratislava, Slovakia.';
-    const description = 'Holy Mass is offered in English each Sunday at 11:00am at Sv. Ladislav Catholic Church ... If you cannot attend the 11:00am English mass, attend mass in Slovak ...';
+    const description = 'Holy Mass is offered in English on Sundays only at 11:30am at the Blue Church (Church of St. Elizabeth), Bezručova 2, Bratislava ... If you cannot attend the 11:30am English mass, attend mass in Slovak ...';
     document.querySelector('meta[name="description"]')?.setAttribute("content", description);
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -69,8 +69,8 @@ export default class HolyMassPage extends React.Component<{}, IState> {
       <Body
         headerContent={
           <div className={styles.titleContainer}>
-            <p className={styles.left}><strong>Holy Masses</strong> at Church of St. Ladislaus</p>
-            <p className={styles.right}>each <strong>Sunday at 11:00am</strong> (in English)</p>
+            <p className={styles.left}><strong>Holy Masses</strong> at the Blue Church</p>
+            <p className={styles.right}>on <strong>Sundays only at 11:30am</strong></p>
           </div>
         }
         className={styles.hollyMassBody}
@@ -93,7 +93,6 @@ export default class HolyMassPage extends React.Component<{}, IState> {
         <h1 className={styles.howToFindUs}>How to find us</h1>
         <div className={styles.bottomContainer}>
           <Map/>
-          <img className={styles.churchPhoto} src={'/img/churchPhoto.webp'} alt={'Church'}/>
         </div>
       </Body>
     );

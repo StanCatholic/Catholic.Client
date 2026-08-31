@@ -9,10 +9,10 @@ const Activities = () => {
       <div className="activities-container">
         <Activity
           title="Holy Mass"
-          description="Holy Mass is offered in English each Sunday at 11:00am at Sv. Ladislav Catholic Church.
-           The church is located at Špitálska 2182/7, 812 50 Bratislava.
-           Across from Tesco department store and near the tram station 'Centrum'.
-           The church is also a short walk from the city center."
+          description="Holy Mass is offered in English on Sundays only at 11:30am at the Blue Church
+           (Church of St. Elizabeth).
+           The church is located at Bezručova 2, 811 09 Bratislava.
+           It is a short walk from the city center."
           image="/img/holy-mass.webp"
           link="/holy-mass"
           isImageTop={true}
