@@ -55,14 +55,15 @@ const Map: FunctionComponent = () => {
                 <p>Bezručova 2, 811 09 Bratislava, Slovakia</p>
               </div>
 
-              <button className={styles.directionsButton} onClick={handleDirectionsClick}>
-                <div style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
-                  <img className="activity__link_arrow" style={{width: 18, height: 14}} src='/img/arrow.png' alt='arrow'/>
-                  <img src={'/img/church.png'} alt={'directions'}/>
-                </div>
-
-                <p>Directions</p>
-
+              <button
+                className={styles.directionsButton}
+                onClick={handleDirectionsClick}
+                aria-label="Directions - opens Google Maps"
+              >
+                <svg className={styles.directionsIcon} viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2 L20 21 L12 17 L4 21 Z"/>
+                </svg>
+                Directions
               </button>
             </div>
             : null}
