@@ -33,7 +33,6 @@ const Activities = () => {
           title="Choir"
           description="
           At the moment we do not have an active choir.
-          The choir prepares the songs for the Sunday English mass and leads the congregation in singing them.
           All who are interested in helping us sing again are warmly invited to join."
           image="/img/holymass-book.webp"
           link="/choir"
