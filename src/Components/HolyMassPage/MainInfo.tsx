@@ -1,4 +1,4 @@
-import React, {FunctionComponent} from "react";
+import React, {FunctionComponent, useState} from "react";
 import IHolyMass from "../../Domain/IHolyMass";
 import moment from "moment";
 import BlurContainer from "../PageElements/BlurContainer";
@@ -16,8 +16,16 @@ interface IProps {
   page: IPage
 }
 
+const visibleMassesCount = 5;
+
 const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
+  const [showAllMasses, setShowAllMasses] = useState(false);
   const selections: IHolyMassSections = page?.body ? JSON.parse(page.body) : null;
+
+  const upcomingMasses = holyMasses
+    .filter(m => m.schedule >= new Date())
+    .sort((a, b) => a.schedule.getTime() - b.schedule.getTime());
+  const visibleMasses = showAllMasses ? upcomingMasses : upcomingMasses.slice(0, visibleMassesCount);
 
   return (
     <BlurContainer
@@ -39,9 +47,7 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
       }
 
       <div>
-        {holyMasses
-          .filter(m => m.schedule >= new Date())
-          .sort((a, b) => a.schedule.getTime() - b.schedule.getTime())
+        {visibleMasses
           .map((holyMass, index) =>
             <div
               key={index}
@@ -59,6 +65,17 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
               </div>
             </div>
           )}
+
+        {upcomingMasses.length > visibleMassesCount &&
+          <div className={styles.showMoreContainer}>
+            <Button
+              text={showAllMasses
+                ? 'Show less'
+                : `Show more (${upcomingMasses.length - visibleMassesCount})`}
+              onClick={() => setShowAllMasses(!showAllMasses)}
+            />
+          </div>
+        }
       </div>
 
       {selections

@@ -59,6 +59,12 @@
     margin-bottom: 0.75rem;
 }
 
+.showMoreContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+}
+
 .holymassNext{
     background: rgba(1, 96, 102, 0.06);
 }
