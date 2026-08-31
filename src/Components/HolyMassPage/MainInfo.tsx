@@ -41,22 +41,21 @@ const MainInfo: FunctionComponent<IProps> = ({holyMasses, page}) => {
       <div>
         {holyMasses
           .filter(m => m.schedule >= new Date())
+          .sort((a, b) => a.schedule.getTime() - b.schedule.getTime())
           .map((holyMass, index) =>
-            <div key={index} className={styles.holymassEventContainer}>
+            <div
+              key={index}
+              className={`${styles.holymassEventContainer} ${index === 0 ? styles.holymassNext : ''}`}
+            >
               <div className={styles.holymassDateTimeContainer}>
-                <div>
-                  <p className={styles.month}>{moment(holyMass.schedule).format('MMMM')}</p>
-                  <p className={styles.day}>{moment(holyMass.schedule).format('DD')}</p>
-                </div>
-                <div className={styles.verticalLine}/>
-                <div>
-                  <p className={styles.dayOfWeek}>{moment(holyMass.schedule).format('dddd')}</p>
-                  <p className={styles.time}>{moment(holyMass.schedule).format('h:mm a')}</p>
-                </div>
+                <p className={styles.month}>{moment(holyMass.schedule).format('MMMM')}</p>
+                <p className={styles.day}>{moment(holyMass.schedule).format('DD')}</p>
+                <p className={styles.dayOfWeek}>{moment(holyMass.schedule).format('dddd')}</p>
               </div>
 
-              <div className={styles.holymassDescription}>
-                {holyMass.description}
+              <div className={styles.holymassDetails}>
+                <p className={styles.time}>{moment(holyMass.schedule).format('h:mm a')}</p>
+                <p className={styles.holymassDescription}>{holyMass.description}</p>
               </div>
             </div>
           )}
