@@ -20,12 +20,6 @@ const ContactsPage: React.FC = () => {
             <p className={`${styles.contactsText}`}>EMAIL</p>
             <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">{email}</a>
           </div>
-
-          <div className={styles.contactsItemContainer}>
-            <img src={'/icons/address.png'} alt='address'/>
-            <p className={`${styles.contactsText}`}>ADDRESS</p>
-            <p>Church of St. Ladislaus Špitálska, 811 08 Staré Mesto, Bratislava</p>
-          </div>
         </div>
       </div>
       <div dangerouslySetInnerHTML={{__html: page.body}}/>
